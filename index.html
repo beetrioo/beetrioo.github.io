@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Nursarah</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        color: #fff;
+        text-align: center;
+        background: url("bg.jpg") center/cover no-repeat;
+        position: relative;
+      }
+
+      .container {
+        padding: 50px 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: 4em;
+        margin-bottom: 0;
+        color: #ff4081;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-weight: normal;
+      }
+
+      .photo {
+        width: 180px;
+        height: 180px;
+        margin: 20px auto;
+        border-radius: 50%;
+        background: url("nursarah1.jpg") center/cover no-repeat;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .message {
+        max-width: 700px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #fff;
+      }
+
+      .footer {
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #888;
+      }
+    </style>
+    <style>
+      .heart {
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        top: -30px;
+        animation: fall linear infinite;
+        z-index: 999;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-30px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* semitransparan hitam */
+        z-index: 0;
+      }
+      .wa-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 25px;
+        background-color: #25d366;
+        color: white;
+        font-weight: bold;
+        border-radius: 30px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+      }
+
+      .wa-btn:hover {
+        background-color: #128c7e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="container">
+      <h1>Happy 21st Birthday</h1>
+      <h2>Untuk Kekasihku Nursarah Azzami</h2>
+      <div class="photo"></div>
+      <div class="message">
+        <a
+          href="https://wa.me/6281401776690?text=Hai%20sayang%2C%20makasih%20banyak%20ya%20buat%20ucapannya%20%F0%9F%A5%B3%20aku%20terharu%20banget"
+          target="_blank"
+          class="wa-btn"
+          >Balas ke WhatsApp 💬</a
+        >
+        <p>Sayang,</p>
+        <p>
+          Selamat ulang tahun yang ke-21. Di usiamu yang penuh harapan ini, aku
+          ingin kau tahu bahwa kamu adalah hal terbaik yang pernah hadir dalam
+          hidupku. Aku tahu akhir-akhir ini kamu sering overthinking — tentang
+          masa depan, tentang kita, tentang banyak hal. Tapi aku ingin kamu
+          percaya satu hal: aku di sini, aku tetap di sini, dan aku akan terus
+          ada untuk kamu.
+        </p>
+        <p>
+          Kamu adalah perempuan hebat, tangguh, dan punya masa depan yang cerah.
+          Magangmu sekarang bukan akhir, tapi awal dari sesuatu yang besar. Aku
+          percaya kamu bisa, aku percaya kita bisa. Jangan biarkan rasa takut
+          mengalahkan apa yang kita punya.
+        </p>
+        <p>
+          Aku mencintaimu bukan hanya karena siapa kamu sekarang, tapi juga
+          karena siapa kamu yang akan kamu perjuangkan di masa depan. Aku akan
+          selalu jadi rumah tempat kamu kembali, pelabuhan tempat kamu bisa
+          bersandar.
+        </p>
+        <p>
+          Selamat ulang tahun, sayangku. Semoga semua ketakutanmu berubah jadi
+          keberanian. Dan semoga cinta kita selalu tumbuh, satu detik lebih lama
+          dari selamanya.
+        </p>
+        <p>Dengan hatiku yang tulus,<br />Rio Agung Wibowo</p>
+      </div>
+      <div class="footer">&copy; 2025 | Dariku Pasanganmu</div>
+    </div>
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 10 + 10 + "px";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+
+      setInterval(createHeart, 300);
+    </script>
+    <audio autoplay loop>
+      <source src="love.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
