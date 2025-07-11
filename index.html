@@ -115,6 +115,11 @@
   </head>
   <body>
     <div class="overlay"></div>
+    <!-- Trigger tombol untuk nyalain musik -->
+<div id="musicTrigger" onclick="startMusic()" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#222;color:#fff;padding:10px 20px;border-radius:8px;z-index:9999;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.3)">
+  🎵 Tap di sini untuk mulai musik
+</div>
+
     <div class="container">
       <h1>Happy 21st Birthday</h1>
       <h2>Untuk Kekasihku Nursarah Azzami</h2>
@@ -175,13 +180,13 @@
     <audio id="bgm" autoplay loop muted>
       <source src="love.mp3" type="audio/mpeg" />
     </audio>
-    <script>
-      // Bikin lagu nyala pas user klik layar (bypass autoplay blocker)
-      window.addEventListener("click", function () {
-        const audio = document.getElementById("bgm");
-        audio.muted = false;
-        audio.play();
-      });
-    </script>
+ <script>
+  function startMusic() {
+    const audio = document.getElementById("bgm");
+    audio.play();
+    document.getElementById("musicTrigger").style.display = "none";
+  }
+</script>
+
   </body>
 </html>
